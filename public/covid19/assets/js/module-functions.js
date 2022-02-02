@@ -66,7 +66,9 @@ function covidActive(info, num) {
 /* ~~~~~~~~~CONTENT OF NODES~~~~~~~ */
 function contentOfNodes(id) {
   var tds = document.querySelectorAll(id);
-  return Array.prototype.map.call(tds, function (t) {
+  console.log(tds);
+  // Array.prototype or [] esl o mismo
+  return [].map.call(tds, function (t) {
     return t.textContent;
   });
 }

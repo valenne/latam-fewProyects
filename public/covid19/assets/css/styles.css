@@ -169,3 +169,28 @@ html {
   font-size: 1.2rem;
   color: rgb(27, 148, 16);
 }
+
+/* modal */
+
+.modal-title {
+  font-size: 1.8rem;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.form-label {
+  font-size: 1.6rem;
+}
+form .btn-form {
+  font-size: 1.4rem;
+}
+
+/* post-validation */
+
+/* mostrar elementos despues de validacion efectiva */
+.post_validation--none {
+  display: none;
+}
+.post_validation--block {
+  display: block;
+}

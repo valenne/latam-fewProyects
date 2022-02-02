@@ -14,6 +14,7 @@ async function graphCanvas() {
 
   // filtro aplicado a la data para uso en grafico
   const covidConfirmados = covidActive(dataCovid, 1000000);
+  // console.log("covidconfirmados", covidConfirmados);
 
   // mapeando "label": pais, y: casos
   const dataPoints = covidConfirmados.map((label) => {

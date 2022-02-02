@@ -26,19 +26,107 @@
         <div class="header__nav">
           <ul>
             <li><a href="#">Home</a></li>
-            <li><a href="#">Iniciar Sesion</a></li>
+            </li>
+            <li class="post_validation">
+              <!-- modal open action -->
+              <a 
+                href="#"
+                data-bs-toggle="modal"
+                data-bs-target="#myModal"
+                >Iniciar Sesion</a
+              >
+            </li>
+            <!-- al validar usuario display:block -->
+            <li id="getDataPais" class="post_validation post_validation--none">
+              <a  href="#" 
+                >Situacion Chile</a
+              >
+            </li>
+            <li class="post_validation post_validation--none" id="CerrarSesion">
+              <a class="a__colorClear" href="#"
+                >Cerrar Sesion</a
+              >
+        
           </ul>
+          <!-- modal bootstrap -->
+
+          <div
+          class="modal fade"
+          id="myModal"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+         
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title text-center">Member Login</h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="img__form">
+                <img src="./assets/img/covid19.jpg" alt="" />
+              </div>
+              <div class="modal-body">
+                <!-- formulario dentro del modal -->
+                <form id="js-form">
+                  <div class="mb-3">
+                    <label for="js-input-email" class="form-label"
+                      >Email address</label
+                    >
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="js-input-email"
+                      aria-describedby="emailHelp"
+                    />
+                    <div id="emailHelp" class="form-text">
+                      We'll never share your email with anyone else.
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="js-input-password" class="form-label"
+                      >Password</label
+                    >
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="js-input-password"
+                    />
+                  </div>
+                  <button id="btnSubmit" type="submit" class="btn-form btn btn-primary">
+                    Submit
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
         </div>
       </div>
     </header>
-    <section class="hero container">
+
+    <section class="hero container post_validation--block">
       <!-- <h1 class="hero__title">Paises con Covid19</h1> -->
       <div
+        class="post_validation--sc"
         id="chartContainer1"
         style="height: 500px; width: 100%; margin: 0 auto"
       ></div>
     </section>
-    <section class="table">
+     <section class="hero container post_validation--block">
+      <!-- <h1 class="hero__title">Paises con Covid19</h1> -->
+      <div
+        id="chartContainer3"
+        style="height: 500px; width: 100%; margin: 0 auto; display: none;"
+      ></div>
+    </section>
+    <section class="table post_validation--sc">
       <div class="table__main container">
         <table id="dataTable"></table>
       </div>
@@ -59,5 +147,10 @@
     <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
     <!-- script v1.0 propio -->
     <script type="module" src="./assets/js/scripts.js"></script>
+    <!-- script v1.0 parte2-chile -->
+    <script
+      type="module"
+      async src="./assets/js/parte-chile/script-chile.js"
+    ></script>
   </body>
 </html>
